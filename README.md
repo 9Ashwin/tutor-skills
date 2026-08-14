@@ -1,63 +1,69 @@
-# closed-loop-tutor
+# closed-loop-tutor(闭环导师)
 
-English | [简体中文](./README_CN.md)
+简体中文 | [English](./README_EN.md)
 
-Turn any AI agent into a high-quality tutor that converts "I want to learn X" into verifiable ability, driven by a closed feedback loop.
+把任意 AI agent 变成高质量导师:将「我想学 X」转化为**可验证的能力**,由一条闭环反馈循环驱动。
 
 ```
-Baseline diagnosis → SMART+OKR goals → Source-first resource stack → Minimal unit lessons
-→ Active recall → Hint-ladder feedback → Variant & transfer exercises
-→ Spaced repetition → No-AI delayed tests → Real-world transfer
+基线诊断 → SMART+OKR 目标 → 源头优先资源栈 → 最小单元课程
+→ 主动回忆 → 提示阶梯反馈 → 变式与迁移练习
+→ 间隔重复 → 无AI延迟测验 → 真实世界迁移
 ```
 
-## The Core Belief
+## 核心理念
 
-> AI shortens the feedback loop; it is not the knowledge source. Ability = what you can still do after removing the AI.
+> AI 缩短反馈循环;它不是知识源。能力 = 撤掉 AI 之后你还能做什么。
 
-## Installation
+## 安装
 
 ```bash
 npx skills add 9Ashwin/closed-loop-tutor
 ```
 
-Or copy `skills/closed-loop-tutor/` into your agent's skills directory.
+或者把 `skills/closed-loop-tutor/` 目录复制进你的 agent 技能目录。
 
-## What it does
+## 它做什么
 
-| Phase | Behavior |
-|-------|----------|
-| Diagnose | Measures the real starting point with a task, not self-report |
-| Goal | SMART + OKR with the with-AI vs without-AI gap as the critical metric |
-| Resources | Source-first stack: official docs → courses → surveys → experts → community |
-| Teach | One minimal, mission-tied lesson per unit; active recall before explanation |
-| Feedback | Hint ladder: attempt → error region → guiding question → principle → example → solution (only on request) |
-| Practice | Variant problems, then cross-context transfer problems |
-| Retain | Spaced repetition (FSRS-style) + no-AI delayed tests |
-| Transfer | Real project or novel context as the finish line; then update the goal |
+| 阶段 | 行为 |
+|------|------|
+| 诊断 | 用真实任务测量起点,不信自我评估 |
+| 目标 | SMART + OKR,关键指标 = 有 AI 与无 AI 的成绩差 |
+| 资源 | 源头优先:官方文档 → 课程 → 综述 → 专家解读 → 社区 |
+| 教学 | 每个最小单元一课,紧扣使命;讲解前先主动回忆 |
+| 反馈 | 提示阶梯:尝试 → 错误区域 → 引导问题 → 原则 → 局部例子 → 完整解法(仅应求给出) |
+| 练习 | 变式题,再出跨情境迁移题 |
+| 记忆 | 间隔重复(FSRS 式)+ 无 AI 延迟测验 |
+| 迁移 | 以真实项目或陌生情境收官;然后更新目标 |
 
-## Workspace
+## 教学工作区
 
-The skill maintains a stateful teaching workspace:
+技能维护一个有状态的教学工作区:
 
 ```
-MISSION.md           why they are learning (grounds everything)
-RESOURCES.md         source-first resource stack
-NOTES.md             learner preferences
-learning-records/    numbered records → zone of proximal development
-lessons/             one self-contained HTML per minimal unit
-reference/           compressed cheat sheets & glossaries
-assets/              reusable components (shared stylesheet first)
+MISSION.md           学习动机(锚定一切教学)
+RESOURCES.md         源头优先的资源栈
+NOTES.md             学习者偏好
+learning-records/    编号学习记录 → 计算最近发展区
+lessons/             每个最小单元一个自包含 HTML
+reference/           压缩速查表与术语表
+assets/              可复用组件(共享样式表优先)
 ```
 
-## Files
+## 文件结构
 
 ```
 skills/closed-loop-tutor/
-├── SKILL.md              skill definition & instructions
-├── README.md             feature overview
+├── SKILL.md              技能定义与指令
+├── README.md             功能总览
 ├── LICENSE               MIT
-└── test-prompts.json     validation prompts
+└── test-prompts.json     验证 prompt
 ```
+
+## 设计说明
+
+- 融合两条成熟传统:闭环学习法(目标 → 基线 → 资源栈 → 最小单元 → 主动回忆 → 反馈 → 间隔 → 迁移)+ 教学工作区模式(MISSION / lessons / reference / learning-records / assets)。
+- 语言无关:适用于编程、语言、数学、手艺等任何主题。
+- Agent 无关:不绑定任何平台 hook,任何 LLM agent 都能采纳。
 
 ## License
 
