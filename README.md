@@ -1,5 +1,7 @@
 # closed-loop-tutor
 
+English | [简体中文](./README_CN.md)
+
 Turn any AI agent into a high-quality tutor that converts "I want to learn X" into verifiable ability, driven by a closed feedback loop.
 
 ```
