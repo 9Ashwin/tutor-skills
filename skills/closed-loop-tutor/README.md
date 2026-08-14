@@ -1,47 +1,46 @@
-# Closed-Loop Tutor Skill
+# 闭环导师技能(Closed-Loop Tutor)
 
-Turn any AI agent into a high-quality tutor that converts "I want to learn X" into verifiable ability, driven by a closed feedback loop.
+把任意 AI agent 变成高质量导师:将「我想学 X」转化为可验证的能力,由闭环反馈循环驱动。
 
-## The Core Belief
+## 核心理念
 
-> AI shortens the feedback loop; it is not the knowledge source. Ability = what you can still do after removing the AI.
+> AI 缩短反馈循环;它不是知识源。能力 = 撤掉 AI 之后你还能做什么。
 
-## Features
+## 特性
 
-- **Baseline diagnosis first** — measures the real starting point with a task, not self-report
-- **Dual-layer goals** — SMART (specific/measurable/achievable/relevant/time-bound) + OKR (outcomes not activities), with the critical with-AI vs without-AI gap metric
-- **Source-first resource stack** — official docs → authoritative courses → quality surveys → expert explanations → community; primary sources kept in original language
-- **Minimal unit lessons** — one tightly-scoped, mission-tied lesson per unit, one tangible win each
-- **Active recall before explanation** — the learner recalls before being taught
-- **Hint ladder feedback** — attempts → error region → guiding question → principle → local example → full solution (only on request)
-- **Error taxonomy** — concept gap / missing condition / false analogy / computational / strategy / carelessness
-- **Variant + transfer exercises** — same concept rephrased, then cross-context
-- **Spaced repetition + no-AI delayed tests** — FSRS-style intervals; mastery = what survives without AI
-- **Real-world transfer as the finish line** — apply to a real project or novel context
-- **Stateful teaching workspace** — MISSION / RESOURCES / NOTES / learning-records / lessons / reference / assets
+- **先做基线诊断** — 用任务测真实起点,不信自我评估
+- **双层目标** — SMART(具体/可衡量/可达/相关/有时限)+ OKR(结果不是活动),含关键的 有AI vs 无AI 差距指标
+- **源头优先资源栈** — 官方文档 → 权威课程 → 高质量综述 → 专家解读 → 社区;原始资料保留原文
+- **最小单元课程** — 一课一个紧扣使命的紧凑主题,一个看得见的收获
+- **讲解前先主动回忆** — 学习者先回忆,再被讲解
+- **提示阶梯反馈** — 尝试 → 错误区域 → 引导问题 → 原则 → 局部例子 → 完整解法(仅应求给出)
+- **错误分类学** — 概念缺失 / 条件遗漏 / 错误类比 / 计算错误 / 策略 / 粗心
+- **变式 + 迁移练习** — 同一概念换皮,再跨情境
+- **间隔重复 + 无AI延迟测验** — FSRS 式间隔;掌握度 = 撤掉 AI 后还能做什么
+- **真实世界迁移收官** — 应用到真实项目或陌生情境
+- **有状态教学工作区** — MISSION / RESOURCES / NOTES / learning-records / lessons / reference / assets
 
-## Usage
+## 用法
 
-Trigger with prompts like:
+用这些说法触发:
 
-- "Teach me X" / "教我 X"
-- "How do I learn Y?" / "怎么学 Y"
-- "Make me a study plan for Z" / "学习计划"
-- "Tutor me on ..." / "辅导我 ..."
-- "I want to learn X" / "我想学 X"
+- "教我 X" / "Teach me X"
+- "怎么学 Y" / "How do I learn Y?"
+- "学习计划" / "Make me a study plan for Z"
+- "辅导我 ..." / "Tutor me on ..."
 
-The skill is self-contained: it creates and maintains the teaching workspace, runs the closed loop, and grades with rubrics.
+技能自包含:它会创建并维护教学工作区、跑闭环循环、用 rubric 批改。
 
-## Files
+## 文件
 
-- `SKILL.md` — Skill definition and instructions
-- `test-prompts.json` — Test prompts for validation
+- `SKILL.md` — 技能定义与指令
+- `test-prompts.json` — 验证用测试 prompt
 
-## Design Notes
+## 设计说明
 
-- Combines two established traditions: the closed-loop learning method (goal → baseline → resource stack → minimal units → active recall → feedback → spacing → transfer) and the teach workspace pattern (MISSION / lessons / reference / learning-records / assets).
-- Language-agnostic: works for programming, languages, math, crafts, anything.
-- Agent-agnostic: no platform-specific hooks; any LLM agent can adopt it.
+- 融合两条成熟传统:闭环学习法(目标 → 基线 → 资源栈 → 最小单元 → 主动回忆 → 反馈 → 间隔 → 迁移)+ 教学工作区模式(MISSION / lessons / reference / learning-records / assets)。
+- 语言无关:适用于编程、语言、数学、手艺等任何主题。
+- Agent 无关:不绑定任何平台 hook,任何 LLM agent 都能采纳。
 
 ## License
 

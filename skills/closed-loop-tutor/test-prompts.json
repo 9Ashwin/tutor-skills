@@ -1,32 +1,32 @@
 [
   {
     "id": 1,
-    "prompt": "Teach me Python",
-    "expected": "Should NOT start teaching immediately. Must first clarify the mission (why/what to build), run a no-AI baseline diagnosis (have them write/explain a small program), then set SMART+OKR goals with a measurable acceptance standard (e.g. independent REST API, no-AI test scores, 14-day delayed retention)."
+    "prompt": "教我 Python",
+    "expected": "不应该直接开始教学。必须先澄清使命(为什么学/要做什么),用无 AI 基线诊断(让他写/解释一小段程序)测真实起点,再定 SMART+OKR 目标,含可衡量的验收标准(如独立开发 REST API、无 AI 测验分数、14 天延迟保持)。"
   },
   {
     "id": 2,
     "prompt": "我想学 Go 后端开发",
-    "expected": "应先用真实任务做基线诊断（让他解释/写一小段 Go 代码），再定 SMART 目标（如：12 周内能独立开发带数据库的 REST 服务，3 次陌生限时测验 ≥80%，14 天延迟复测 ≥75%），并建立源头优先的资源栈（官方文档优先于博客）。"
+    "expected": "应先用真实任务做基线诊断(让他解释/写一小段 Go 代码),再定 SMART 目标(如:12 周内能独立开发带数据库的 REST 服务,3 次陌生限时测验 ≥80%,14 天延迟复测 ≥75%),并建立源头优先的资源栈(官方文档优先于博客)。"
   },
   {
     "id": 3,
-    "prompt": "Why is my code broken? (debugging request)",
-    "expected": "Should engage with the actual code, but when the learner is practicing, use the hint ladder: identify the error region first, give a guiding question, escalate to principle/local example, and only reveal the full solution when explicitly asked. Log the error type."
+    "prompt": "我的代码为什么坏了?(调试请求)",
+    "expected": "应参与实际代码;当学习者在练习时,用提示阶梯:先指出错误区域,给引导问题,升级到原则/局部例子,只有明确要求才给完整解法。记录错误类型。"
   },
   {
     "id": 4,
-    "prompt": "Quiz me on the things I've learned",
-    "expected": "Should generate a no-AI delayed test (closed book, timed) covering previously learned minimal units, grade with a fixed rubric (concept correctness / reasoning chain / evidence quality / unsupported assumptions), and report what survives without AI — not just with-AI performance."
+    "prompt": "考考我学过的内容",
+    "expected": "应生成无 AI 延迟测验(闭卷、限时),覆盖之前学过的所有最小单元,用固定 rubric 批改(概念正确性/推理链完整/证据质量/未支持假设),报告撤掉 AI 后还能做什么——不是只看有 AI 时的表现。"
   },
   {
     "id": 5,
-    "prompt": "Make me a study plan for machine learning",
-    "expected": "Should build a plan that maps to the closed loop: baseline diagnosis first, then resource stack (source-first: papers/docs → courses → surveys → blogs), minimal units in dependency order, spaced repetition schedule, transfer exercises, and a no-AI evaluation checkpoint. Should NOT be just a list of topics."
+    "prompt": "给我做个机器学习的学习计划",
+    "expected": "应构建映射到闭环的计划:先基线诊断,再源头优先资源栈(论文/文档 → 课程 → 综述 → 博客),按依赖顺序排最小单元,安排间隔重复、迁移练习和无 AI 评估检查点。不应该只是一堆主题列表。"
   },
   {
     "id": 6,
-    "prompt": "I don't understand recursion",
-    "expected": "Should create/continue a teaching workspace entry for this minimal unit, force active recall (ask them to explain recursion in their own words or trace a small function first), then use the hint ladder — not a lecture dump. After comprehension, generate a variant problem and a transfer problem."
+    "prompt": "我不理解递归",
+    "expected": "应为这个最小单元创建/继续教学工作区条目,强制主动回忆(先让他用自己的话解释递归或跟踪一个小函数),然后用提示阶梯——不是讲课灌。理解后生成一个变式题和一个迁移题。"
   }
 ]
