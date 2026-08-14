@@ -118,7 +118,7 @@ RESOURCES.md        源头优先资源栈
 NOTES.md            学习者偏好
 learning-records/   编号记录,frontmatter 带 error-type:(无错误写 none)
 no-ai-test/         无AI测验:questions.md + 答案分离
-lessons/            每个最小单元一个自包含 HTML 课,结尾锚定提示阶梯组件
+lessons/            每个最小单元一个自包含 HTML 课,结尾 footer 含 `<a href="../assets/prompt-ladder.html">提示阶梯</a>` 链接(不是只提名字)
 reference/          压缩速查表、术语表
 assets/             复用组件(共享样式表、prompt-ladder.html)
 ```
@@ -136,7 +136,7 @@ assets/             复用组件(共享样式表、prompt-ladder.html)
 ```text
 单元通过 = 无AI默写/作答准确率 ≥ 90%(记入 BASELINE)
           + 迁移练习独立完成(不看资料)
-          + 解释原理按 Rubric 判分 ≥ 3/4(见下)
+          + 解释原理按 Rubric 判分 A、B 均 ≥3(见下)
 ```
 
 - 通过 → map.md 标「已掌握」,排间隔复习(3 天),继续下一单元
