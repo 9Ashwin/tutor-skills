@@ -6,7 +6,7 @@ A collection of open-source teaching skills for AI agents — generic, reusable,
 
 | Skill | Directory | Description |
 |-------|-----------|-------------|
-| **Socratic Tutor** | `skills/socratic-tutor/` | Turn "I want to learn X" into verifiable ability: baseline diagnosis → SMART goals → resource stack → minimal units → active recall → hint-ladder feedback → spaced repetition → transfer verification |
+| **Socratic Tutor** | `skills/socratic-tutor/` | Two tiers: daily tutoring = 3 iron rules (attempt before answer / active recall / error taxonomy); systematic learning = full closed loop (baseline → map → hint ladder → spaced repetition → proctored no-AI tests → gate with Rubric grading) |
 
 ## Install
 
