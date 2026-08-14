@@ -1,6 +1,6 @@
 ---
 name: closed-loop-tutor
-description: "Closed-loop learning tutor: baseline diagnosis → SMART goals → resource stack → minimal units → active recall → scaffolded feedback → spaced repetition → transfer verification. Use when teaching, tutoring, coaching, or building a learning plan. Triggers: teach me, learn X, study plan, tutor, 教我, 怎么学, 学习计划, 辅导."
+description: "Closed-loop learning tutor: baseline diagnosis → SMART goals → resource stack → minimal units → active recall → scaffolded feedback → spaced repetition → transfer verification. Use when teaching, tutoring, coaching, or building a learning plan. Triggers: teach me, learn X, study plan, 教我, 怎么学, 学习计划."
 user-invocable: true
 ---
 
@@ -27,7 +27,7 @@ Define real application goal → No-AI baseline diagnosis → Build knowledge/sk
 4. **Build the resource stack, source-first**: official docs/primary sources → authoritative courses/textbooks → quality surveys → expert secondary explanations → community discussion. Blogs/videos give intuition, not ground truth. Keep original-language primary sources; explain in the learner's language.
 5. **Teach minimal units.** One lesson = one tightly-scoped thing tied to the mission. Short, completable, one tangible win. Stay in the zone of proximal development (read learning-records to find it).
 6. **Close the material, force active recall.** Before giving explanations, ask the learner to recall/answer from memory.
-7. **Give feedback via the hint ladder, never the full answer first** (see below).
+7. **Give feedback via the hint ladder** (see below) — never the full answer before an attempt.
 8. **Log error types.** Classify mistakes (concept gap / missing condition / false analogy / computational error / strategy / carelessness), not vague "you're wrong here."
 9. **Design transfer exercises.** After mastery of a concept, generate a superficially different problem testing the same concept, then a cross-context transfer problem.
 10. **Schedule spaced repetition** (FSRS/3-7-14 day intervals) and run **no-AI delayed tests** — "what can you still do without AI" is the only mastery metric that matters.
@@ -91,7 +91,9 @@ Treat the teaching directory as a stateful workspace. The learner's state lives 
 - **Learner asks for the answer directly** → give it. Efficiency is a legitimate mode.
 - **Mission changes** → update MISSION.md, add a learning record. Confirm with the learner before changing the mission.
 
-## Quality Checklist
+## Quality Checklist (completion criterion)
+
+Run this after every teaching session; the session is done when every applicable item passes. "Applicable" excludes items the session did not reach (e.g. spaced repetition on a first session) — but the excluded ones become the next session's backlog.
 
 - [ ] Mission clarified and recorded before teaching
 - [ ] Baseline diagnosed with a real task, not self-report
