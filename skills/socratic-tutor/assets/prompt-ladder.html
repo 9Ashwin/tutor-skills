@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>提示阶梯 · Prompt Ladder</title>
+<style>
+  body { font-family: "Noto Sans SC", system-ui, sans-serif; background: #faf8f5; color: #2b2b2b; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.7; }
+  h1 { font-size: 26px; border-bottom: 3px solid #c0512f; padding-bottom: 10px; }
+  .ladder { display: flex; flex-direction: column; gap: 0; margin: 24px 0; }
+  .rung { display: flex; align-items: center; gap: 14px; padding: 14px 18px; border: 1px solid #e0d8cf; background: #fff; }
+  .rung:first-child { border-radius: 10px 10px 0 0; }
+  .rung:last-child { border-radius: 0 0 10px 10px; }
+  .rung .level { width: 64px; font-weight: 700; font-size: 15px; color: #c0512f; flex-shrink: 0; }
+  .rung .action { font-weight: 600; }
+  .rung .when { color: #777; font-size: 13px; }
+  .rung.trigger { background: #fff5f0; border-left: 4px solid #c0512f; }
+  .rule { background: #f0ebe3; border-radius: 10px; padding: 14px 18px; margin: 16px 0; font-size: 14px; }
+  .rule strong { color: #c0512f; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+  th, td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; }
+  th { background: #f0ebe3; }
+  .foot { color: #888; font-size: 13px; margin-top: 28px; }
+</style>
+</head>
+<body>
+
+<h1>提示阶梯</h1>
+<p>苏格拉底式反馈的五个档位。从下往上走:<b>每次只给当前需要的那一档</b>,不要跳级,不要一次给完。</p>
+
+<div class="ladder">
+  <div class="rung trigger">
+    <div class="level">L1 · 尝试</div>
+    <div><div class="action">学习者先作答</div><div class="when">每一轮的开始。没尝试之前,下面四档都不许用。</div></div>
+  </div>
+  <div class="rung">
+    <div class="level">L2 · 区域</div>
+    <div><div class="action">指出错误发生在哪一步</div><div class="when">第一次失败。只定位,不给解法。</div></div>
+  </div>
+  <div class="rung">
+    <div class="level">L3 · 引导</div>
+    <div><div class="action">提一个引导性问题</div><div class="when">第二次失败。问题指向概念,不指向答案。</div></div>
+  </div>
+  <div class="rung">
+    <div class="level">L4 · 原则</div>
+    <div><div class="action">说出背后的原则</div><div class="when">第三次失败。给原理,不给代码。</div></div>
+  </div>
+  <div class="rung">
+    <div class="level">L5 · 示例</div>
+    <div><div class="action">≤5 行局部示例</div><div class="when">第四次失败。最小可理解的片段。</div></div>
+  </div>
+</div>
+
+<div class="rule">
+  <strong>完整解法</strong>只在学习者明确说「展示完整解法」时给出——这是 L6,不是默认终点。
+</div>
+
+<h2>每次该用哪一级</h2>
+<table>
+  <tr><th>学习者状态</th><th>用哪级</th><th>为什么</th></tr>
+  <tr><td>还没尝试</td><td>L1 要求作答</td><td>尝试本身是最重要的学习动作</td></tr>
+  <tr><td>答错,思路明显偏了</td><td>L2 指出区域</td><td>让他知道错在哪一步,自己修正</td></tr>
+  <tr><td>答错,方向对但不完整</td><td>L3 引导提问</td><td>用一个问题补上他漏掉的环节</td></tr>
+  <tr><td>同一错误第二次出现</td><td>L4 给原则</td><td>概念缺了,得补原理</td></tr>
+  <tr><td>卡住超过两轮</td><td>L5 局部示例</td><td>例子比解释更能解锁</td></tr>
+  <tr><td>明确要答案</td><td>L6 完整解法</td><td>效率是正当模式,不端着</td></tr>
+</table>
+
+<h2>铁律</h2>
+<ul>
+  <li>解题后不结束:让他解释根本错误 → 变式题 → 迁移题。</li>
+  <li>答对也要追一步:你是怎么想到的?——逼他外化思路。</li>
+  <li>错误分类记进 learning-records 的 <code>error-type:</code> 字段(概念缺失/条件遗漏/错误类比/计算/策略/粗心)。</li>
+</ul>
+
+<div class="foot">苏格拉底导师 · 组件文件。课程引用:<code>&lt;a href="../assets/prompt-ladder.html"&gt;提示阶梯&lt;/a&gt;</code></div>
+
+</body>
+</html>
