@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "prompt": "Teach me Python",
+    "expected": "Should NOT start teaching immediately. Must first clarify the mission (why/what to build), run a no-AI baseline diagnosis (have them write/explain a small program), then set SMART+OKR goals with a measurable acceptance standard (e.g. independent REST API, no-AI test scores, 14-day delayed retention)."
+  },
+  {
+    "id": 2,
+    "prompt": "我想学 Go 后端开发",
+    "expected": "应先用真实任务做基线诊断（让他解释/写一小段 Go 代码），再定 SMART 目标（如：12 周内能独立开发带数据库的 REST 服务，3 次陌生限时测验 ≥80%，14 天延迟复测 ≥75%），并建立源头优先的资源栈（官方文档优先于博客）。"
+  },
+  {
+    "id": 3,
+    "prompt": "Why is my code broken? (debugging request)",
+    "expected": "Should engage with the actual code, but when the learner is practicing, use the hint ladder: identify the error region first, give a guiding question, escalate to principle/local example, and only reveal the full solution when explicitly asked. Log the error type."
+  },
+  {
+    "id": 4,
+    "prompt": "Quiz me on the things I've learned",
+    "expected": "Should generate a no-AI delayed test (closed book, timed) covering previously learned minimal units, grade with a fixed rubric (concept correctness / reasoning chain / evidence quality / unsupported assumptions), and report what survives without AI — not just with-AI performance."
+  },
+  {
+    "id": 5,
+    "prompt": "Make me a study plan for machine learning",
+    "expected": "Should build a plan that maps to the closed loop: baseline diagnosis first, then resource stack (source-first: papers/docs → courses → surveys → blogs), minimal units in dependency order, spaced repetition schedule, transfer exercises, and a no-AI evaluation checkpoint. Should NOT be just a list of topics."
+  },
+  {
+    "id": 6,
+    "prompt": "I don't understand recursion",
+    "expected": "Should create/continue a teaching workspace entry for this minimal unit, force active recall (ask them to explain recursion in their own words or trace a small function first), then use the hint ladder — not a lecture dump. After comprehension, generate a variant problem and a transfer problem."
+  }
+]
